@@ -16,18 +16,18 @@
 
     /*
     *機能：htmlの選択項目(文字)を作ってくれるよ
-    *構文：createOptionWor(選択したい単語の配列:array)
+    *構文：createOptionWor(選択したい単語の配列:array 最初に入力されている値(必要なければ適当な単語))
     *使用場面：期間や年数を入力するところ全般
     *アプデ予定：初期値を登録できるようにしたい
     */
 
-    function createOptionWor (array $wordList)
+    function createOptionWor (array $wordList , $defaultWord)
     {
         foreach($wordList as $selectWord){
-            /*
-            データベースができたら初期値の変更のための条件分岐
-            */
-            echo "<option value=".$selectWord.">".$selectWord."</option>".PHP_EOL;
-
+            if($selectWord == $defaultWord){
+                echo "<option value=".$selectWord." selected>".$selectWord."</option>".PHP_EOL;
+            }else{
+                echo "<option value=".$selectWord.">".$selectWord."</option>".PHP_EOL;
+            }    
         }
     } 
