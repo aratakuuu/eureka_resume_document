@@ -1,5 +1,7 @@
 <?php
 
+    declare(strict_types=1);
+
     function createOptionNum(int $firstNumber, int $lastNumber, $nameName1)
     {
         /*
@@ -57,7 +59,6 @@
         }
     }
 
-    declare(strict_types=1);
 
     /**
      * PDOインスタンスを取得する関数
